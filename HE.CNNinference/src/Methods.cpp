@@ -48,16 +48,17 @@ int CNNinference(int rownum, int vctslots, int image_height, int image_width, ve
   
 
       
-  Scheme scheme(logN, logQ);
+
+	Scheme scheme(logN, logQ);
   SecretKey secretKey(logN);
-  auto pubKey = scheme.generatePubKey(secretKey);
-  auto conjKey = scheme.generateConjKey(secretKey);
-  auto multKey = scheme.generateMultKey(secretKey);
-  auto leftRotKey = scheme.generateLeftRotKey(secretKey, 1);
-  auto rightRotKey = scheme.generateRightRotKey(secretKey, 1);
+	auto pubKey = scheme.generatePubKey(secretKey);	scheme.setEncryptionKey(pubKey);
+	auto conjKey = scheme.generateConjKey(secretKey);	scheme.setConjugationKey(conjKey);
+	auto multKey = scheme.generateMultKey(secretKey);	scheme.setMultiplicationKey(multKey);
+	auto leftRotKey = scheme.generateLeftRotKey(secretKey, 1);	scheme.setLeftRotKey(1, leftRotKey);
+	auto rightRotKey = scheme.generateRightRotKey(secretKey, 1);	scheme.setRightRotKey(1, rightRotKey);
 
-
-  
+  scheme.addLeftRotKey(secretKey, 2);
+  scheme.addRightRotKey(secretKey, 2);
   ///////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////
   ///////////////////////////////////////////////////////////////////////////////////////////
