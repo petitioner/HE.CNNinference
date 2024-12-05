@@ -7,6 +7,7 @@
 #include <string.h>
 #include <string>
 #include <vector>
+#include <sstream>
 #include <algorithm>    // std::shuffle + std::copy
 #include <array>        // std::array
 #include <random>       // std::default_random_engine
@@ -104,58 +105,83 @@ double** Tools::zDataFromFile(string& path, long& factorDim, long& sampleDim, bo
  * @return : zData = (Y{-1,+1}, Y@X)
  * @author : no one
  */
-double** Tools::dataFromFile(string& path, long& factorDim, long& sampleDim, double** &X, double* &Y){
-	vector<vector<double>> zline;
-	factorDim = 0; 	// dimension of (Y,X)
-	sampleDim = 0;	// number of samples
-	ifstream openFile(path.data());
-	if (openFile.is_open()) {
-		string line, temp;
-		
-		while (getline(openFile, line)) {
-			if(factorDim == 0)
-				for (long i = 0; i < line.length(); ++i)	
-					if (line[i] == ',')	factorDim++;
+vector<vector<vector<double>>>  Tools::dataFromFile(string& path){
 
-			size_t pos = line.find_first_of(',', 0);
-			string first_word = line.substr(0, pos);
-			if(!is_number(first_word))
-				getline(openFile, line);
+    std::ifstream infile(path);
+    if (!infile.is_open()) {
+        std::cerr << "Failed to open file: " << filename << std::endl;
+        return 1; 
+    }
 
-			size_t start, end;	
-			vector<double> vecline;
-			do {
-				end = line.find_first_of(',', start);
-				temp = line.substr(start, end);
-				vecline.push_back(atof(temp.c_str()));
-				start = end + 1;
-			} while (start);
-			zline.push_back(vecline);
-			sampleDim++;
-		}
-	} else {
-		cout << "Error: cannot read file" << endl;
-	}
+    std::string line;
+    if (std::getline(infile, line)) {
+        std::cout << "Skipping the first line: " << line << std::endl;
+    } else {
+        std::cerr << "File is empty or could not read the first line." << std::endl;
+        return 1;
+    }
 
-	double** zData = new double*[sampleDim];
-	X = new double*[sampleDim];
-	Y = new double[sampleDim];
+    vector<vector<vector<double>>> dataset;
+        vector<vector<double>> labels;
+        vector<vector<double>> reddata;
+        vector<vector<double>> grndata;
+        vector<vector<double>> blkdata;
 
-	for (long j = 0; j < sampleDim; ++j) {
-		double* zj = new double[factorDim];
-		double* xj = new double[factorDim];
-		Y[j] = zline[j][0];
+    int idx = 0;
+    while (std::getline(infile, line)) {
+        vector<double> redline;
+        vector<double> grnline;
+        vector<double> blkline;
 
-		for (long i = 0; i < factorDim; ++i) { 
-			zj[i] = zline[j][i]; 
+        stringstream ss(line);
 
-			xj[i] = zline[j][1 + i];
-		}
-		zData[j] = zj;
-		X[j] = xj;
-	}
+        char comma, quote;
+        int label, red, green, black;
 
-	return zData;
+        ss >> label; 
+        vector<double> labline;
+        labline.push_back(label);
+        labels.push_back(labline);
+
+        ss >> comma;
+
+        while (!ss.eof()) {
+
+            ss >> quote;
+
+            ss >> red >> comma;
+            ss >> green >> comma;
+            ss >> black >> comma;
+            ss >> quote;
+
+            redline.push_back(red);
+            grnline.push_back(green);
+            blkline.push_back(black);
+
+
+            idx += 1;
+            if ( idx % 32 == 0) cout << endl;
+
+            double gray_value = (red + green + black) / 3.0;
+            int gray_code = 232 + std::round(gray_value / 255.0 * 23);
+            std::cout << "\033[38;5;" << gray_code << "m" << " . " << "\033[0m";
+        }
+
+        reddata.push_back(redline);
+        grndata.push_back(grnline);
+        blkdata.push_back(blkline);
+    }
+
+    dataset.push_back(labels);
+    dataset.push_back(reddata);
+    dataset.push_back(grndata);
+    dataset.push_back(blkdata);
+
+    infile.close(); 
+
+
+
+    return dataset;
 }
 
 double** Tools::dataFromCNNweightsFile(string& path, long& len, long* &dims){
