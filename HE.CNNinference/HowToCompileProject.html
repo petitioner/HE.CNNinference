@@ -1,0 +1,1107 @@
+<pre><font color="#26A269"><b>john@ThinkBook15IML</b></font>:<font color="#12488B"><b>~</b></font>$ ssh root@66.135.23.150
+The authenticity of host &apos;66.135.23.150 (66.135.23.150)&apos; can&apos;t be established.
+ED25519 key fingerprint is SHA256:T8ppicSBzonptQFtkvOBLQiYEYN6q27UPv2SBxvmMUQ.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added &apos;66.135.23.150&apos; (ED25519) to the list of known hosts.
+root@66.135.23.150&apos;s password: 
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-48-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Dec  5 02:06:24 AM UTC 2024
+
+  System load:             0.88
+  Usage of /:              25.0% of 22.88GB
+  Memory usage:            19%
+  Swap usage:              0%
+  Processes:               133
+  Users logged in:         0
+  IPv4 address for enp1s0: 66.135.23.150
+  IPv6 address for enp1s0: 2001:19f0:0:413d:5400:5ff:fe31:e5c8
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+7 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+root@vultr:~# git clone  https://github.com/petitioner/HE.CNNinference
+Cloning into &apos;HE.CNNinference&apos;...
+remote: Enumerating objects: 9009, done.
+remote: Counting objects: 100% (1183/1183), done.
+remote: Compressing objects: 100% (680/680), done.
+remote: Total 9009 (delta 534), reused 955 (delta 478), pack-reused 7826 (from 1)
+Receiving objects: 100% (9009/9009), 2.18 GiB | 27.92 MiB/s, done.
+Resolving deltas: 100% (4524/4524), done.
+Updating files: 100% (8846/8846), done.
+root@vultr:~# ls
+<font color="#12488B"><b>HE.CNNinference</b></font>
+root@vultr:~# cd HE.CNNinference/HE.CNNinference/lib/
+root@vultr:~/HE.CNNinference/HE.CNNinference/lib# ls
+libgmp.a  libgmp.la  libgmp.so  libgmp.so.10  libgmp.so.10.3.2  libgmpxx.a  libgmpxx.la  libgmpxx.so  libgmpxx.so.4  libgmpxx.so.4.5.2  <font color="#C01C28"><b>libntl.a.zip</b></font>
+root@vultr:~/HE.CNNinference/HE.CNNinference/lib# unzip libntl.a.zip 
+Archive:  libntl.a.zip
+  inflating: libntl.a                
+root@vultr:~/HE.CNNinference/HE.CNNinference/lib# cd ..
+root@vultr:~/HE.CNNinference/HE.CNNinference# cd HEAAN/
+root@vultr:~/HE.CNNinference/HE.CNNinference/HEAAN# ls
+<font color="#C01C28"><b>HEAAN.zip</b></font>  LICENSE  README.md  slide-HEAAN.pdf
+root@vultr:~/HE.CNNinference/HE.CNNinference/HEAAN# unzip HEAAN.zip 
+Archive:  HEAAN.zip
+   creating: HEAAN/
+[HEAAN.zip] HEAAN/.project password: 
+  inflating: HEAAN/.project          
+   creating: HEAAN/lib/
+  inflating: HEAAN/lib/libHEAAN.a    
+   creating: HEAAN/lib/src/
+  inflating: HEAAN/lib/src/subdir.mk  
+  inflating: HEAAN/lib/objects.mk    
+  inflating: HEAAN/lib/makefile      
+  inflating: HEAAN/lib/sources.mk    
+   creating: HEAAN/run/
+  inflating: HEAAN/run/makefile      
+  inflating: HEAAN/run/test.cpp      
+   creating: HEAAN/.settings/
+  inflating: HEAAN/.settings/org.eclipse.cdt.codan.core.prefs  
+  inflating: HEAAN/.settings/language.settings.xml  
+  inflating: HEAAN/.cproject         
+   creating: HEAAN/src/
+   creating: HEAAN/src/model/
+  inflating: HEAAN/src/model/Plaintext.o  
+  inflating: HEAAN/src/model/Ciphertext.o  
+  inflating: HEAAN/src/model/Ring.h  
+  inflating: HEAAN/src/model/SecretKey.o  
+  inflating: HEAAN/src/model/SecretKey.h  
+  inflating: HEAAN/src/model/RingPair.o  
+  inflating: HEAAN/src/model/Ciphertext.h  
+  inflating: HEAAN/src/model/Plaintext.cpp  
+  inflating: HEAAN/src/model/BigInteger.cpp  
+  inflating: HEAAN/src/model/Plaintext.h  
+  inflating: HEAAN/src/model/BigInteger.java  
+  inflating: HEAAN/src/model/Ring.o  
+  inflating: HEAAN/src/model/Ring.cpp  
+  inflating: HEAAN/src/model/Ciphertext.cpp  
+  inflating: HEAAN/src/model/SecretKey.cpp  
+  inflating: HEAAN/src/model/BigInteger.o  
+  inflating: HEAAN/src/model/Key.o   
+  inflating: HEAAN/src/model/Key.h   
+  inflating: HEAAN/src/model/RingPair.cpp  
+  inflating: HEAAN/src/model/RingPair.h  
+  inflating: HEAAN/src/model/BigInteger.h  
+ extracting: HEAAN/src/model/Key.cpp  
+  inflating: HEAAN/src/HEAAN.h       
+   creating: HEAAN/src/util/
+  inflating: HEAAN/src/util/FFT.cpp  
+  inflating: HEAAN/src/util/NumUtils.o  
+  inflating: HEAAN/src/util/StringUtils.o  
+  inflating: HEAAN/src/util/TimeUtils.o  
+  inflating: HEAAN/src/util/SerializationUtils.cpp  
+  inflating: HEAAN/src/util/NumUtils.h  
+  inflating: HEAAN/src/util/TimeUtils.cpp  
+  inflating: HEAAN/src/util/EvaluatorUtils.h  
+  inflating: HEAAN/src/util/StringUtils.h  
+  inflating: HEAAN/src/util/Common.h  
+  inflating: HEAAN/src/util/FFT.o    
+  inflating: HEAAN/src/util/TimeUtils.h  
+  inflating: HEAAN/src/util/SerializationUtils.h  
+  inflating: HEAAN/src/util/StringUtils.cpp  
+  inflating: HEAAN/src/util/EvaluatorUtils.cpp  
+  inflating: HEAAN/src/util/FFT.h    
+  inflating: HEAAN/src/util/NumUtils.cpp  
+  inflating: HEAAN/src/util/SerializationUtils.o  
+  inflating: HEAAN/src/util/EvaluatorUtils.o  
+   creating: HEAAN/src/service/
+  inflating: HEAAN/src/service/SubstractionManager.o  
+  inflating: HEAAN/src/service/AdditionManager.o  
+  inflating: HEAAN/src/service/SubstractionManager.cpp  
+  inflating: HEAAN/src/service/MultiplicationManager.o  
+  inflating: HEAAN/src/service/AdditionManager.cpp  
+  inflating: HEAAN/src/service/DecryptionManager.h  
+  inflating: HEAAN/src/service/BootstrappingManager.h  
+  inflating: HEAAN/src/service/EncryptionManager.h  
+  inflating: HEAAN/src/service/DecryptionManager.o  
+  inflating: HEAAN/src/service/BootstrappingManager.o  
+  inflating: HEAAN/src/service/DecryptionManager.cpp  
+  inflating: HEAAN/src/service/RingFunctionUsedinServicelayer.txt  
+  inflating: HEAAN/src/service/MultiplicationManager.h  
+  inflating: HEAAN/src/service/EncryptionManager.cpp  
+  inflating: HEAAN/src/service/MultiplicationManager.cpp  
+  inflating: HEAAN/src/service/RotationManager.h  
+  inflating: HEAAN/src/service/RotationManager.cpp  
+  inflating: HEAAN/src/service/AdditionManager.h  
+  inflating: HEAAN/src/service/RotationManager.o  
+  inflating: HEAAN/src/service/BootstrappingManager.cpp  
+  inflating: HEAAN/src/service/EncryptionManager.o  
+  inflating: HEAAN/src/service/SubstractionManager.h  
+  inflating: HEAAN/src/HEAAN.cpp     
+   creating: HEAAN/src/action/
+  inflating: HEAAN/src/action/TestScheme.cpp  
+  inflating: HEAAN/src/action/Scheme.h  
+ extracting: HEAAN/src/action/SchemeAlgo.7z  
+  inflating: HEAAN/src/action/Scheme.cpp  
+  inflating: HEAAN/src/action/Scheme.o  
+  inflating: HEAAN/src/action/TestScheme.h  
+  inflating: HEAAN/src/action/TestScheme.o  
+root@vultr:~/HE.CNNinference/HE.CNNinference/HEAAN# ls
+<font color="#12488B"><b>HEAAN</b></font>  <font color="#C01C28"><b>HEAAN.zip</b></font>  LICENSE  README.md  slide-HEAAN.pdf
+root@vultr:~/HE.CNNinference/HE.CNNinference/HEAAN# cd ..
+root@vultr:~/HE.CNNinference/HE.CNNinference# cd Default/
+root@vultr:~/HE.CNNinference/HE.CNNinference/Default# make clean
+rm      ./src/CNNinference.o ./src/VolleyRevolverEncoding.o ./src/Methods.o ./src/Tools.o  ../HEAAN/HEAAN/src/action/Scheme.o ../HEAAN/HEAAN/src/action/TestScheme.o ../HEAAN/HEAAN/src/model/BigInteger.o ../HEAAN/HEAAN/src/model/Ciphertext.o ../HEAAN/HEAAN/src/model/Key.o ../HEAAN/HEAAN/src/model/Plaintext.o ../HEAAN/HEAAN/src/model/Ring.o ../HEAAN/HEAAN/src/model/RingPair.o ../HEAAN/HEAAN/src/model/SecretKey.o ../HEAAN/HEAAN/src/service/AdditionManager.o ../HEAAN/HEAAN/src/service/BootstrappingManager.o ../HEAAN/HEAAN/src/service/DecryptionManager.o ../HEAAN/HEAAN/src/service/EncryptionManager.o ../HEAAN/HEAAN/src/service/MultiplicationManager.o ../HEAAN/HEAAN/src/service/RotationManager.o ../HEAAN/HEAAN/src/service/SubstractionManager.o ../HEAAN/HEAAN/src/util/EvaluatorUtils.o ../HEAAN/HEAAN/src/util/FFT.o ../HEAAN/HEAAN/src/util/NumUtils.o ../HEAAN/HEAAN/src/util/SerializationUtils.o ../HEAAN/HEAAN/src/util/StringUtils.o ../HEAAN/HEAAN/src/util/TimeUtils.o ./src/CNNinference.d ./src/VolleyRevolverEncoding.d ./src/Methods.d ./src/Tools.d  ../HEAAN/HEAAN/src/action/Scheme.d ../HEAAN/HEAAN/src/action/TestScheme.d ../HEAAN/HEAAN/src/model/BigInteger.d ../HEAAN/HEAAN/src/model/Ciphertext.d ../HEAAN/HEAAN/src/model/Key.d ../HEAAN/HEAAN/src/model/Plaintext.d ../HEAAN/HEAAN/src/model/Ring.d ../HEAAN/HEAAN/src/model/RingPair.d ../HEAAN/HEAAN/src/model/SecretKey.d ../HEAAN/HEAAN/src/service/AdditionManager.d ../HEAAN/HEAAN/src/service/BootstrappingManager.d ../HEAAN/HEAAN/src/service/DecryptionManager.d ../HEAAN/HEAAN/src/service/EncryptionManager.d ../HEAAN/HEAAN/src/service/MultiplicationManager.d ../HEAAN/HEAAN/src/service/RotationManager.d ../HEAAN/HEAAN/src/service/SubstractionManager.d ../HEAAN/HEAAN/src/util/EvaluatorUtils.d ../HEAAN/HEAAN/src/util/FFT.d ../HEAAN/HEAAN/src/util/NumUtils.d ../HEAAN/HEAAN/src/util/SerializationUtils.d ../HEAAN/HEAAN/src/util/StringUtils.d ../HEAAN/HEAAN/src/util/TimeUtils.d  CNNinference
+rm: cannot remove &apos;../HEAAN/HEAAN/src/action/Scheme.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/action/TestScheme.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/model/BigInteger.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/model/Ciphertext.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/model/Key.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/model/Plaintext.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/model/Ring.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/model/RingPair.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/model/SecretKey.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/service/AdditionManager.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/service/BootstrappingManager.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/service/DecryptionManager.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/service/EncryptionManager.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/service/MultiplicationManager.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/service/RotationManager.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/service/SubstractionManager.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/util/EvaluatorUtils.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/util/FFT.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/util/NumUtils.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/util/SerializationUtils.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/util/StringUtils.d&apos;: No such file or directory
+rm: cannot remove &apos;../HEAAN/HEAAN/src/util/TimeUtils.d&apos;: No such file or directory
+rm: cannot remove &apos;CNNinference&apos;: No such file or directory
+make: [makefile:79: clean] Error 1 (ignored)
+ 
+root@vultr:~/HE.CNNinference/HE.CNNinference/Default# make all
+Building file: ../src/CNNinference.cpp
+Invoking: GCC C++ Compiler [CNNinference/Default/src/subdir.mk]
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -O2 -g -Wall -c -fmessage-length=0 -MMD -MP -MF&quot;src/CNNinference.d&quot; -MT&quot;src/CNNinference.o&quot; -o &quot;src/CNNinference.o&quot; &quot;../src/CNNinference.cpp&quot;
+<b>../src/CNNinference.cpp:</b> In function ‘<b>int</b><font color="#26A269"><b> main</b></font>(int, char**)’:
+<b>../src/CNNinference.cpp:53:18:</b> <font color="#A347BA"><b>warning: </b></font>unused variable ‘<b>traindataset</b>’ [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   53 |         double **<font color="#A347BA"><b>traindataset</b></font>, **testdataset;
+      |                  <font color="#A347BA"><b>^~~~~~~~~~~~</b></font>
+<b>../src/CNNinference.cpp:54:17:</b> <font color="#A347BA"><b>warning: </b></font>unused variable ‘<b>traindatalabel</b>’ [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   54 |         double *<font color="#A347BA"><b>traindatalabel</b></font>, *testdatalabel;
+      |                 <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../src/CNNinference.cpp:57:18:</b> <font color="#A347BA"><b>warning: </b></font>unused variable ‘<b>zDate</b>’ [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   57 |         double **<font color="#A347BA"><b>zDate</b></font> = Tools::dataFromFile(testfile, testfactorDim, testSampleDim, testdataset, testdatalabel);
+      |                  <font color="#A347BA"><b>^~~~~</b></font>
+In file included from <b>../src/Methods.h:1</b>,
+                 from <b>../src/CNNinference.cpp:9</b>:
+<b>../src/Tools.h:</b> At global scope:
+<b>../src/Tools.h:67:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_36</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   67 | static double <font color="#A347BA"><b>degree7_36</b></font>[5] = {+0.5, -0.11634, +0.0011850, -0.0000062074, +0.000000011389};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:63:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_24</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   63 | static double <font color="#A347BA"><b>degree7_24</b></font>[5] = {+0.5, -0.15512, +0.0028088, -0.000026158,  +0.000000085324};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:60:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_12</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   60 | static double <font color="#A347BA"><b>degree7_12</b></font>[5] = {+0.5, -2.3514e-01, +1.2329e-02, -3.9345e-04, +4.7292e-06};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:50:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   50 | static double <font color="#A347BA"><b>degree7</b></font>[5] = {+0.5, -0.10843500, +0.00102394287, -0.00000518229, +0.00000000934};  //|wTx| &lt; 16
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:44:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree5</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   44 | static double <font color="#A347BA"><b>degree5</b></font>[4] = {+0.5, -0.19131, +0.0045963,   -0.0000412332};
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:42:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree3</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   42 | static double <font color="#A347BA"><b>degree3</b></font>[3] = {+0.5, -0.15012, +0.00159300781};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+Finished building: ../src/CNNinference.cpp
+ 
+Building file: ../src/VolleyRevolverEncoding.cpp
+Invoking: GCC C++ Compiler [CNNinference/Default/src/subdir.mk]
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -O2 -g -Wall -c -fmessage-length=0 -MMD -MP -MF&quot;src/VolleyRevolverEncoding.d&quot; -MT&quot;src/VolleyRevolverEncoding.o&quot; -o &quot;src/VolleyRevolverEncoding.o&quot; &quot;../src/VolleyRevolverEncoding.cpp&quot;
+In file included from <b>../src/VolleyRevolverEncoding.h:3</b>,
+                 from <b>../src/VolleyRevolverEncoding.cpp:1</b>:
+<b>../src/Tools.h:67:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_36</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   67 | static double <font color="#A347BA"><b>degree7_36</b></font>[5] = {+0.5, -0.11634, +0.0011850, -0.0000062074, +0.000000011389};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:63:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_24</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   63 | static double <font color="#A347BA"><b>degree7_24</b></font>[5] = {+0.5, -0.15512, +0.0028088, -0.000026158,  +0.000000085324};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:60:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_12</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   60 | static double <font color="#A347BA"><b>degree7_12</b></font>[5] = {+0.5, -2.3514e-01, +1.2329e-02, -3.9345e-04, +4.7292e-06};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:50:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   50 | static double <font color="#A347BA"><b>degree7</b></font>[5] = {+0.5, -0.10843500, +0.00102394287, -0.00000518229, +0.00000000934};  //|wTx| &lt; 16
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:44:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree5</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   44 | static double <font color="#A347BA"><b>degree5</b></font>[4] = {+0.5, -0.19131, +0.0045963,   -0.0000412332};
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:42:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree3</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   42 | static double <font color="#A347BA"><b>degree3</b></font>[3] = {+0.5, -0.15012, +0.00159300781};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+Finished building: ../src/VolleyRevolverEncoding.cpp
+ 
+Building file: ../src/Methods.cpp
+Invoking: GCC C++ Compiler [CNNinference/Default/src/subdir.mk]
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -O2 -g -Wall -c -fmessage-length=0 -MMD -MP -MF&quot;src/Methods.d&quot; -MT&quot;src/Methods.o&quot; -o &quot;src/Methods.o&quot; &quot;../src/Methods.cpp&quot;
+In file included from <b>../src/Methods.cpp:1</b>:
+<b>../src/Tools.h:67:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_36</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   67 | static double <font color="#A347BA"><b>degree7_36</b></font>[5] = {+0.5, -0.11634, +0.0011850, -0.0000062074, +0.000000011389};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:63:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_24</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   63 | static double <font color="#A347BA"><b>degree7_24</b></font>[5] = {+0.5, -0.15512, +0.0028088, -0.000026158,  +0.000000085324};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:60:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_12</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   60 | static double <font color="#A347BA"><b>degree7_12</b></font>[5] = {+0.5, -2.3514e-01, +1.2329e-02, -3.9345e-04, +4.7292e-06};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:50:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   50 | static double <font color="#A347BA"><b>degree7</b></font>[5] = {+0.5, -0.10843500, +0.00102394287, -0.00000518229, +0.00000000934};  //|wTx| &lt; 16
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:44:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree5</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   44 | static double <font color="#A347BA"><b>degree5</b></font>[4] = {+0.5, -0.19131, +0.0045963,   -0.0000412332};
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:42:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree3</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   42 | static double <font color="#A347BA"><b>degree3</b></font>[3] = {+0.5, -0.15012, +0.00159300781};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+Finished building: ../src/Methods.cpp
+ 
+Building file: ../src/Tools.cpp
+Invoking: GCC C++ Compiler [CNNinference/Default/src/subdir.mk]
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -O2 -g -Wall -c -fmessage-length=0 -MMD -MP -MF&quot;src/Tools.d&quot; -MT&quot;src/Tools.o&quot; -o &quot;src/Tools.o&quot; &quot;../src/Tools.cpp&quot;
+<b>../src/Tools.cpp:</b> In static member function ‘<b>static double** Tools::</b><font color="#26A269"><b>zDataFromFile</b></font>(std::string&amp;, long int&amp;, long int&amp;, bool)’:
+<b>../src/Tools.cpp:46:52:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::__cxx11::basic_string&lt;char&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+   46 |                                 for (long i = 0; <font color="#A347BA"><b>i &lt; line.length()</b></font>; ++i)
+      |                                                  <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~</b></font>
+<b>../src/Tools.cpp:</b> In static member function ‘<b>static double** Tools::</b><font color="#26A269"><b>dataFromFile</b></font>(std::string&amp;, long int&amp;, long int&amp;, double**&amp;, double*&amp;)’:
+<b>../src/Tools.cpp:117:52:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::__cxx11::basic_string&lt;char&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+  117 |                                 for (long i = 0; <font color="#A347BA"><b>i &lt; line.length()</b></font>; ++i)
+      |                                                  <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~</b></font>
+<b>../src/Tools.cpp:</b> In static member function ‘<b>static double** Tools::</b><font color="#26A269"><b>dataFromCNNweightsFile</b></font>(std::string&amp;, long int&amp;, long int*&amp;)’:
+<b>../src/Tools.cpp:181:44:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::__cxx11::basic_string&lt;char&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+  181 |                         for (long i = 0; <font color="#A347BA"><b>i &lt; line.length()</b></font>; ++i)
+      |                                          <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~</b></font>
+<b>../src/Tools.cpp:</b> In static member function ‘<b>static double Tools::</b><font color="#26A269"><b>calculateAUC</b></font>(double**, double*, long int, long int, double&amp;, double&amp;)’:
+<b>../src/Tools.cpp:319:27:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::vector&lt;double&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+  319 |         for(long i = 0; <font color="#A347BA"><b>i &lt; thetaTN.size()</b></font>; ++i){
+      |                         <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~~</b></font>
+<b>../src/Tools.cpp:320:31:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::vector&lt;double&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+  320 |             for(long j = 0; <font color="#A347BA"><b>j &lt; thetaFP.size()</b></font>; ++j){
+      |                             <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~~</b></font>
+<b>../src/Tools.cpp:</b> In static member function ‘<b>static double Tools::</b><font color="#26A269"><b>calculateACC</b></font>(double**, double*, long int, long int, double&amp;, double&amp;)’:
+<b>../src/Tools.cpp:360:27:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::vector&lt;double&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+  360 |         for(long i = 0; <font color="#A347BA"><b>i &lt; thetaTN.size()</b></font>; ++i){
+      |                         <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~~</b></font>
+<b>../src/Tools.cpp:361:31:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::vector&lt;double&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+  361 |             for(long j = 0; <font color="#A347BA"><b>j &lt; thetaFP.size()</b></font>; ++j){
+      |                             <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~~</b></font>
+In file included from <b>../src/Tools.cpp:1</b>:
+<b>../src/Tools.h:</b> At global scope:
+<b>../src/Tools.h:67:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_36</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   67 | static double <font color="#A347BA"><b>degree7_36</b></font>[5] = {+0.5, -0.11634, +0.0011850, -0.0000062074, +0.000000011389};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:63:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_24</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   63 | static double <font color="#A347BA"><b>degree7_24</b></font>[5] = {+0.5, -0.15512, +0.0028088, -0.000026158,  +0.000000085324};
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:60:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7_12</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   60 | static double <font color="#A347BA"><b>degree7_12</b></font>[5] = {+0.5, -2.3514e-01, +1.2329e-02, -3.9345e-04, +4.7292e-06};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../src/Tools.h:50:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree7</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   50 | static double <font color="#A347BA"><b>degree7</b></font>[5] = {+0.5, -0.10843500, +0.00102394287, -0.00000518229, +0.00000000934};  //|wTx| &lt; 16
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:44:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree5</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   44 | static double <font color="#A347BA"><b>degree5</b></font>[4] = {+0.5, -0.19131, +0.0045963,   -0.0000412332};
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+<b>../src/Tools.h:42:15:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>degree3</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   42 | static double <font color="#A347BA"><b>degree3</b></font>[3] = {+0.5, -0.15012, +0.00159300781};  // 1 - poly(-yWTx)
+      |               <font color="#A347BA"><b>^~~~~~~</b></font>
+Finished building: ../src/Tools.cpp
+ 
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/action/Scheme.o ../HEAAN/HEAAN/src/action/Scheme.cpp
+In file included from <b>../HEAAN/HEAAN/src/action/Scheme.h:3</b>,
+                 from <b>../HEAAN/HEAAN/src/action/Scheme.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/action/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/action/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/action/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/action/TestScheme.o ../HEAAN/HEAAN/src/action/TestScheme.cpp
+<b>../HEAAN/HEAAN/src/action/TestScheme.cpp:</b> In static member function ‘<b>static void TestScheme::</b><font color="#26A269"><b>testEncodeBatch</b></font>(long int, long int, long int, long int)’:
+<b>../HEAAN/HEAAN/src/action/TestScheme.cpp:722:14:</b> <font color="#A347BA"><b>warning: </b></font>unused variable ‘<b>dvec</b>’ [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+  722 |         auto <font color="#A347BA"><b>dvec</b></font> = scheme.decrypt(secretKey, cipher);
+      |              <font color="#A347BA"><b>^~~~</b></font>
+<b>../HEAAN/HEAAN/src/action/TestScheme.cpp:</b> In static member function ‘<b>static void TestScheme::</b><font color="#26A269"><b>testRotateBatch</b></font>(long int, long int, long int, long int, long int, bool)’:
+<b>../HEAAN/HEAAN/src/action/TestScheme.cpp:1003:22:</b> <font color="#A347BA"><b>warning: </b></font>unused variable ‘<b>dvec</b>’ [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+ 1003 |                 auto <font color="#A347BA"><b>dvec</b></font> = scheme.decrypt(secretKey, cipher);
+      |                      <font color="#A347BA"><b>^~~~</b></font>
+<b>../HEAAN/HEAAN/src/action/TestScheme.cpp:985:14:</b> <font color="#A347BA"><b>warning: </b></font>unused variable ‘<b>dvec</b>’ [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+  985 |         auto <font color="#A347BA"><b>dvec</b></font> = scheme.decrypt(secretKey, cipher);
+      |              <font color="#A347BA"><b>^~~~</b></font>
+In file included from <b>../HEAAN/HEAAN/src/action/TestScheme.cpp:7</b>:
+<b>../HEAAN/HEAAN/src/action/../util/Common.h:</b> At global scope:
+<b>../HEAAN/HEAAN/src/action/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/action/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/action/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/model/BigInteger.o ../HEAAN/HEAAN/src/model/BigInteger.cpp
+<b>../HEAAN/HEAAN/src/model/BigInteger.cpp:</b> In member function ‘<b>void BigInteger::</b><font color="#26A269"><b>kill</b></font>()’:
+<b>../HEAAN/HEAAN/src/model/BigInteger.cpp:109:6:</b> <font color="#A347BA"><b>warning: </b></font>infinite recursion detected [<font color="#A347BA"><b>-Winfinite-recursion</b></font>]
+  109 | void <font color="#A347BA"><b>BigInteger</b></font>::kill() {
+      |      <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/model/BigInteger.cpp:110:15:</b> <font color="#2AA1B3"><b>note: </b></font>recursive call
+  110 |     <font color="#2AA1B3"><b>this-&gt;kill()</b></font>;
+      |     <font color="#2AA1B3"><b>~~~~~~~~~~^~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/model/Ciphertext.o ../HEAAN/HEAAN/src/model/Ciphertext.cpp
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/model/Key.o ../HEAAN/HEAAN/src/model/Key.cpp
+In file included from <b>../HEAAN/HEAAN/src/model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/model/Key.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/model/Plaintext.o ../HEAAN/HEAAN/src/model/Plaintext.cpp
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/model/Ring.o ../HEAAN/HEAAN/src/model/Ring.cpp
+<b>../HEAAN/HEAAN/src/model/Ring.cpp:</b> In constructor ‘<b>Ring::</b><font color="#26A269"><b>Ring</b></font>(const std::vector&lt;BigInteger&gt;&amp;)’:
+<b>../HEAAN/HEAAN/src/model/Ring.cpp:39:24:</b> <font color="#A347BA"><b>warning: </b></font>comparison of integer expressions of different signedness: ‘<b>long int</b>’ and ‘<b>std::vector&lt;BigInteger&gt;::size_type</b>’ {aka ‘<b>long unsigned int</b>’} [<font color="#A347BA"><b>-Wsign-compare</b></font>]
+   39 |     for (long i = 0; <font color="#A347BA"><b>i &lt; coeffs.size()</b></font>; i++) {
+      |                      <font color="#A347BA"><b>~~^~~~~~~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/model/RingPair.o ../HEAAN/HEAAN/src/model/RingPair.cpp
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/model/SecretKey.o ../HEAAN/HEAAN/src/model/SecretKey.cpp
+In file included from <b>../HEAAN/HEAAN/src/model/../util/NumUtils.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/model/SecretKey.h:6</b>,
+                 from <b>../HEAAN/HEAAN/src/model/SecretKey.cpp:1</b>:
+<b>../HEAAN/HEAAN/src/model/../util/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/model/../util/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/model/../util/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/service/AdditionManager.o ../HEAAN/HEAAN/src/service/AdditionManager.cpp
+In file included from <b>../HEAAN/HEAAN/src/service/../model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/service/AdditionManager.h:5</b>,
+                 from <b>../HEAAN/HEAAN/src/service/AdditionManager.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/service/BootstrappingManager.o ../HEAAN/HEAAN/src/service/BootstrappingManager.cpp
+In file included from <b>../HEAAN/HEAAN/src/service/../model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/service/BootstrappingManager.h:8</b>,
+                 from <b>../HEAAN/HEAAN/src/service/BootstrappingManager.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/service/DecryptionManager.o ../HEAAN/HEAAN/src/service/DecryptionManager.cpp
+In file included from <b>../HEAAN/HEAAN/src/service/../model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/service/DecryptionManager.h:5</b>,
+                 from <b>../HEAAN/HEAAN/src/service/DecryptionManager.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/service/EncryptionManager.o ../HEAAN/HEAAN/src/service/EncryptionManager.cpp
+In file included from <b>../HEAAN/HEAAN/src/service/../model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/service/EncryptionManager.h:5</b>,
+                 from <b>../HEAAN/HEAAN/src/service/EncryptionManager.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/service/MultiplicationManager.o ../HEAAN/HEAAN/src/service/MultiplicationManager.cpp
+In file included from <b>../HEAAN/HEAAN/src/service/../model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/service/MultiplicationManager.h:5</b>,
+                 from <b>../HEAAN/HEAAN/src/service/MultiplicationManager.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/service/RotationManager.o ../HEAAN/HEAAN/src/service/RotationManager.cpp
+In file included from <b>../HEAAN/HEAAN/src/service/../model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/service/RotationManager.h:11</b>,
+                 from <b>../HEAAN/HEAAN/src/service/RotationManager.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/service/SubstractionManager.o ../HEAAN/HEAAN/src/service/SubstractionManager.cpp
+In file included from <b>../HEAAN/HEAAN/src/service/../model/Key.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/service/SubstractionManager.h:5</b>,
+                 from <b>../HEAAN/HEAAN/src/service/SubstractionManager.cpp:2</b>:
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/service/../model/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/util/EvaluatorUtils.o ../HEAAN/HEAAN/src/util/EvaluatorUtils.cpp
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/util/FFT.o ../HEAAN/HEAAN/src/util/FFT.cpp
+In file included from <b>../HEAAN/HEAAN/src/util/FFT.h:8</b>,
+                 from <b>../HEAAN/HEAAN/src/util/FFT.cpp:1</b>:
+<b>../HEAAN/HEAAN/src/util/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/util/NumUtils.o ../HEAAN/HEAAN/src/util/NumUtils.cpp
+In file included from <b>../HEAAN/HEAAN/src/util/../util/NumUtils.h:7</b>,
+                 from <b>../HEAAN/HEAAN/src/util/NumUtils.cpp:1</b>:
+<b>../HEAAN/HEAAN/src/util/../util/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/util/SerializationUtils.o ../HEAAN/HEAAN/src/util/SerializationUtils.cpp
+<b>../HEAAN/HEAAN/src/util/SerializationUtils.cpp:</b> In static member function ‘<b>static void SerializationUtils::</b><font color="#26A269"><b>saveZZXToFile</b></font>(std::ofstream&amp;, const NTL::ZZX&amp;)’:
+<b>../HEAAN/HEAAN/src/util/SerializationUtils.cpp:25:5:</b> <font color="#A347BA"><b>warning: </b></font>this ‘<b>for</b>’ clause does not guard... [<font color="#A347BA"><b>-Wmisleading-indentation</b></font>]
+   25 |     <font color="#A347BA"><b>for</b></font> (long i = 0; i &lt; size; ++i)
+      |     <font color="#A347BA"><b>^~~</b></font>
+<b>../HEAAN/HEAAN/src/util/SerializationUtils.cpp:28:9:</b> <font color="#2AA1B3"><b>note: </b></font>...this statement, but the latter is misleadingly indented as if it were guarded by the ‘<b>for</b>’
+   28 |         <font color="#2AA1B3"><b>std</b></font>::cout &lt;&lt; &quot;saveZZXToFile is opening file for writing!&quot; &lt;&lt; std::endl;
+      |         <font color="#2AA1B3"><b>^~~</b></font>
+<b>../HEAAN/HEAAN/src/util/SerializationUtils.cpp:</b> In static member function ‘<b>static void SerializationUtils::</b><font color="#26A269"><b>loadZZXVectorFromFile</b></font>(std::ifstream&amp;, std::vector&lt;NTL::ZZX&gt;&amp;)’:
+<b>../HEAAN/HEAAN/src/util/SerializationUtils.cpp:151:24:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>void*</b><font color="#26A269"><b> memcpy</b></font>(void*, const void*, size_t)’ writing to an object of type ‘<b>class NTL::ZZ</b>’ with no trivial copy-assignment; use copy-assignment or copy-initialization instead [<font color="#A347BA"><b>-Wclass-memaccess</b></font>]
+  151 |             <font color="#A347BA"><b>std::memcpy(&amp;zzx.rep[i], buffer.data() + i * sizeof(ZZ), sizeof(ZZ))</b></font>;
+      |             <font color="#A347BA"><b>~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</b></font>
+In file included from <b>../HEAAN/HEAAN/src/util/../util/../model/Ciphertext.h:3</b>,
+                 from <b>../HEAAN/HEAAN/src/util/../util/SerializationUtils.h:5</b>,
+                 from <b>../HEAAN/HEAAN/src/util/SerializationUtils.cpp:2</b>:
+<b>/root/HE.CNNinference/HE.CNNinference/include/NTL/ZZ.h:30:7:</b> <font color="#2AA1B3"><b>note: </b></font>‘<b>class NTL::ZZ</b>’ declared here
+   30 | class <font color="#2AA1B3"><b>ZZ</b></font> {
+      |       <font color="#2AA1B3"><b>^~</b></font>
+In file included from <b>../HEAAN/HEAAN/src/util/../util/../action/Scheme.h:3</b>,
+                 from <b>../HEAAN/HEAAN/src/util/../util/SerializationUtils.h:7</b>:
+<b>../HEAAN/HEAAN/src/util/../util/../action/../util/Common.h:</b> At global scope:
+<b>../HEAAN/HEAAN/src/util/../util/../action/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/../action/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/../action/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/util/StringUtils.o ../HEAAN/HEAAN/src/util/StringUtils.cpp
+In file included from <b>../HEAAN/HEAAN/src/util/../util/StringUtils.h:5</b>,
+                 from <b>../HEAAN/HEAAN/src/util/StringUtils.cpp:1</b>:
+<b>../HEAAN/HEAAN/src/util/../util/../util/Common.h:19:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>CONJUGATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   19 | static long <font color="#A347BA"><b>CONJUGATION</b></font> = 2;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/../util/Common.h:18:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>MULTIPLICATION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   18 | static long <font color="#A347BA"><b>MULTIPLICATION</b></font>  = 1;
+      |             <font color="#A347BA"><b>^~~~~~~~~~~~~~</b></font>
+<b>../HEAAN/HEAAN/src/util/../util/../util/Common.h:17:13:</b> <font color="#A347BA"><b>warning: </b></font>‘<b>ENCRYPTION</b>’ defined but not used [<font color="#A347BA"><b>-Wunused-variable</b></font>]
+   17 | static long <font color="#A347BA"><b>ENCRYPTION</b></font> = 0;
+      |             <font color="#A347BA"><b>^~~~~~~~~~</b></font>
+g++ -I/root/HE.CNNinference/HE.CNNinference/include -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/action -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/model -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/service -I/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/src/util -std=c++11 -O2 -g -Wall   -c -o ../HEAAN/HEAAN/src/util/TimeUtils.o ../HEAAN/HEAAN/src/util/TimeUtils.cpp
+Building target: CNNinference
+Invoking: GCC C++ Linker4Testing
+g++ -L/root/HE.CNNinference/HE.CNNinference/lib -L/root/HE.CNNinference/HE.CNNinference/HEAAN/HEAAN/lib -pthread -o CNNinference ./src/CNNinference.o ./src/VolleyRevolverEncoding.o ./src/Methods.o ./src/Tools.o  ../HEAAN/HEAAN/src/action/Scheme.o ../HEAAN/HEAAN/src/action/TestScheme.o ../HEAAN/HEAAN/src/model/BigInteger.o ../HEAAN/HEAAN/src/model/Ciphertext.o ../HEAAN/HEAAN/src/model/Key.o ../HEAAN/HEAAN/src/model/Plaintext.o ../HEAAN/HEAAN/src/model/Ring.o ../HEAAN/HEAAN/src/model/RingPair.o ../HEAAN/HEAAN/src/model/SecretKey.o ../HEAAN/HEAAN/src/service/AdditionManager.o ../HEAAN/HEAAN/src/service/BootstrappingManager.o ../HEAAN/HEAAN/src/service/DecryptionManager.o ../HEAAN/HEAAN/src/service/EncryptionManager.o ../HEAAN/HEAAN/src/service/MultiplicationManager.o ../HEAAN/HEAAN/src/service/RotationManager.o ../HEAAN/HEAAN/src/service/SubstractionManager.o ../HEAAN/HEAAN/src/util/EvaluatorUtils.o ../HEAAN/HEAAN/src/util/FFT.o ../HEAAN/HEAAN/src/util/NumUtils.o ../HEAAN/HEAAN/src/util/SerializationUtils.o ../HEAAN/HEAAN/src/util/StringUtils.o ../HEAAN/HEAAN/src/util/TimeUtils.o  -lntl -lgmp -lHEAAN -lm
+Finished building target: CNNinference
+ 
+root@vultr:~/HE.CNNinference/HE.CNNinference/Default# ./CNNinference 
+Number of hardware threads available: 1
+!!! testAllFunctions() !!!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+saveZZXToFile is opening file for writing!
+leftRotKeyNum12
+keyID1
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax134560617264782751125707672513332671932102237663683164251850734575987676751063563608492840707532989091995162213980137989986736651005613732307109373203768224122863708074740868498382298674429318457941211007942331911304136592321081760896097814494207669002650231771959801859190994443118575528565342842325269449787838657276939212161224239588538189020123958901079513654735130540262650271811567399399013052926027663339778925492603931052850496740773954925580058709050008536630543592735724406022945698380453377671711984860316151984743747379730067883486209301820711725530859277543415456777086493323847303106480230740434436566112201900493891630868117462107051106538115062633716049344000669942161290715737121717730966073673457295857829
+bx-2
+keyID2
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax15247252862826800637138342811705901243041699080302346686213128381704139667175768109711455061644583878172601340788977518192226652876447995914309635926767408382484215101410532917859726340008304908223859120983556957434919140472497786439443848551617127482631585174976706967110673219613922527161401473909902587550943923889173964329412936727077541071430586042304153979966999478415730666388335217007246501821424943593906242592667328068767110516966092841565185288777633614617126462460654147984152028670159881340804374741437715581295340498716250054850643620421473453585078135973835424397922805868304087676765040060534127167103665803846325727609649449245950624379251472218791585969449198100224125901399977645586827832741911490619989
+bx4
+keyID4
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax229178757498596403214011285775494375272073589195554587764098305704472067385375096445704087182081238474345851030325424687985096964615866938963846409798961167150945115906566574580214537667285467173068820432668099018163358427124673108366578813685037150174022998610984184626021409119756813682222760193682342690343414093928844154926076875033711414785416935386332519696913102084658728672114481860099367539881015819045932669949543168203909287688766283397901696764646125624282761344369682726337800978169543767584730111729057556209719325168710148439323834951866907566258379549053970227594260817908818200153820150553460963407592554542470231573755301708615643373646847963182904390414964126068133847537277287599943454486795829686741392
+bx4
+keyID6
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax12969537202010375713991165646294654782479168083402133002906346139700033533204134675477775940023435952219774201899444443826226603282657041568587912966057329897965365035393867094854468585662028621186919835775985245895568448879959071391974862053182954453907148159595699557556293545323190393771383423047454831068505970046288474402377618868853031979164562441987187873817259415332823240381725084527964807439646242944988212651137445518883243625066496807604049641829414309552034174308009751639269406997225627184976414109828309359894213184221325155509083926098322848679194079901436293642385765750446528382447847961657441931385031233894607747023924234979053614766533968009345565441959782665933231822319887688756034906096764727686372
+bx0
+keyID8
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax295739380742325678919098855119656091115606030584808216592715661139674926037258213191245397177451007397983882445926058230132356391930473104503834330535846955438940721004160191545563839733305047546794244961403952541365923767123179436843121445249273195858511675296351796549166717381725937602804734211481730719668955717256995027369136644080159387467195295379024916649739210231961511060078364633433367178523733042813424526512026032672450044995467734223192456204644237831170814301764970456113395870372263123951241372355098356783731257131186578263540776522115726210563083426279213890236218616047784434888471754018892497204078105999896722202903716238356976669871439591719557033811229471511881227204993854197315571719639097917297421
+bx4
+keyID16
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax210768361421137501964758980973807204894986328408617323209776359053094749875865558375498220961130513658024553162242071065313392517233789711384639130386149277154885723242697641125526111695190022084546394288084971631844833525951530189666558540097207703616740444967114354261429837561910385865232337401125215477399184696922213298093924321743333268897972092592756620716609923850093837858830749753448195795309510275201273521156449489062774374537440684347922361663974995523713572887667117146807256998472959658523514788702686109107704064188489384316008718984724578962010068121417989717711494334551846499364621063165707520198264915041400978652000452430688014202776896886077231231577502914075254228384016578750354824786861210892106630
+bx3
+keyID32
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax17758685592962532073321374444565791658232045131119206305445642436458719053203325098120677579854466912770398572347952803768961948567059369604859930835947387291680709884952696997407922538804299133911402132769351196890768157244081622867694961971184898876094145989265268455883143965888687655592658235844261616733915253885259583634016046886446265071475161243266336665659166055119101255589288911586438391161023585347425666181831995369850074200930399114694297227714471937478901564197457683845918774950581167630908529804287070936666064163760815931240075963471540635664567649579711052647410412886054246751185464755866711277367001190113272127338127961554027986340785185824078982816955874384605284984336757555702173053697109065117026
+bx2
+keyID64
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax291137769409431769461809796966662201259263648976114374255658067258755597580174112600952746881154531186906117836511481753789711525494920986491052915131912156951871448529764290272787296664806245096892288733340900457052744417646013121633536395135301890433842114005711921906103401773662124770076075412865524549231468168381010847253315832799734872529966435039324886875658656108404568399033841758065670761843397253639045538034967076776836689996473964173628973864594922787354477324376172324125412241263582314658554810992755025275437132909801517243309567118762281778006401055461557799435749080576888641433326774871996394450347772839548262876628481151554283344693301625897625317046580693282534821114437412667460366792365563461458347
+bx-1
+keyID128
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax24440642949564959439667311688576139307295110209207868807483321025923858650151106660657039099732750577776342818024994208213330439980741373670554882783661187823331282796855668354834977052563169926711152234400876486332331241446960624881690699008053399978235307637159322388865600872204808440538451432355430503783712982654123825589452902249590999132453229318341823691426125980498894428743046578718962423031298260524754558639856353144197083396062253302509787868156984722556499982586477219174884446815421609188770497791406219897899982959981292977762785976692239119937041754669396970571136583062930373625411519893839819412610480117912248521621052499383188863483372327739156802076131180928982302729984268342397836709123560922506695
+bx5
+keyID256
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax125316499054828333813184533738339053404131947803624168752511890230815862724502306703453625104233146465031804319515526252334828497298419706450265734452663263839848116134958173929877551937733186989970569011586504179440251446144930912991559878217551605101879974341482106652958534530629283532174832552961252295726691592985525785028178029271587078123885668451892999078835096412953937630241723057768240014516614268208462362783511495191133374597382462935125476699513724158759629262078653275568498225287580315991304438512964490479324326929233882190604857987868685894437204366683376776914246311408243377819648942960751586266037203726855577987467287928383732419563525161346071680428919388692228318058681739221457197287422363281959379
+bx-1
+keyID512
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax56740218903588431646227643688426093082288391908817240117646657165846309440273245824617390514752171152562646223803913875835451267406620231310696391995081884159859970404040228429662214853632534778492813748139038950108553193191919163460838547527484473627438690934141701466458744338213183174355321682175738826141982354033332612069092443414142222113382389182968835734250403518172421416966330713896158163301887170735580355424856149760829702127650327190779388054647749641930710407521866596508968650129286281233451623312134990363928774810162572023555924324640659100451755376683889467551955413547714397164550156664485382412963861240530764590216876141253822818386779184383084369613114705814816686555152845889384178364981963935070655
+bx-5
+keyID1023
+loadZZXFromFile is opening file for reading!
+loadZZXFromFile is opening file for reading!
+ax234290471255022822038202471640112957811702368565146216033179786618028579914450283290294271997670127579009682392615267879038609563252029852634353231711916331129396205223311032291172619023466738484173997001820389080033145798330051407300827147045315405730498611078776537583605391926659286897173434084705411973373174165018288166791333897310107352791682345866815877874185938228533855537714139872562388389139883175093699107110775298212278396592582141041294595977093103141302928654608450935066954839979598397502708524666883130595106257922032370928251038887319670291957371729872996413243774945372342451873345940252064629507996960898746916137439778271826871724288612373873001808456802215485149595440398523492119731295567187661104818
+bx-2
+------------------
+Start Key generating
+Key generated time = 0 ms
+------------------
+---------------------
+mEnc and Dec:0.964953
+dEnc and Dec:0.964953
+eEnc and Dec:3.16486e-08
+---------------------
+
+
+
+---------------------
+mnegate():0.964953
+dnegate():-0.964953
+enegate():1.92991
+---------------------
+---------------------
+msame():0.964953
+dsame():0.964953
+esame():3.16486e-08
+---------------------
+
+
+
+---------------------
+mnegateAndEqual():0.964953
+dnegateAndEqual():-0.964953
+enegateAndEqual():1.92991
+---------------------
+
+
+
+cipher.logp = 23
+ctrs = cipher.reScaleBy(1);kjlgjhghjj
+ctrs.logp = 22
+---------------------
+mreScaleBy(1):0.964953
+dreScaleBy(1):0.964953
+ereScaleBy(1):3.16486e-08
+---------------------
+
+
+
+cipher.logp = 23
+cipher.reScaleByAndEqual(1);
+cipher.logp = 22
+---------------------
+mreScaleByAndEqual(1):0.964953
+dreScaleByAndEqual(1):0.964953
+ereScaleByAndEqual(1):3.16486e-08
+---------------------
+
+
+
+cipher.logp = 23
+ctrs = cipher.reScaleTo(30);llllllllllll
+ctrs.logp = 30
+---------------------
+mreScaleTo(30):0.964953
+dreScaleTo(30):0.964953
+ereScaleTo(30):3.16486e-08
+---------------------
+
+
+
+cipher.logp = 23
+cipher.reScaleToAndEqual(30);jjjjjjjjjj
+cipher.logp = 30
+---------------------
+mreScaleToAndEqual(30);:0.964953
+dreScaleToAndEqual(30);:0.964953
+ereScaleToAndEqual(30);:3.16486e-08
+---------------------
+
+
+
+cipher.logq = 1200
+ctrs = cipher.modDownBy(10);
+ctrs.logq = 1190
+---------------------
+mmodDownBy(10):0.964953
+dmodDownBy(10):0.964953
+emodDownBy(10):3.16486e-08
+---------------------
+
+
+
+cipher.logq = 1200
+cipher.modDownByAndEqual(80);
+cipher.logq = 1120
+---------------------
+mmodDownByAndEqual(80):0.964953
+dmodDownByAndEqual(80):0.964953
+emodDownByAndEqual(80):3.16486e-08
+---------------------
+
+
+
+cipher.logq = 1120
+ctrs = cipher.modDownTo(300);
+ctrs.logq = 300
+---------------------
+mmodDownTo(300):0.964953
+dmodDownTo(300):0.964953
+emodDownTo(300):3.16486e-08
+---------------------
+
+
+
+cipher.logq = 1120
+cipher.modDownToAndEqual(300);
+cipher.logq = 300
+---------------------
+mmodDownToAndEqual(300):0.964953
+dmodDownToAndEqual(300):0.964953
+emodDownToAndEqual(300):3.16486e-08
+---------------------
+
+
+
+---------------------
+madd(cipher1, cipher2):0.688714
+dadd(cipher1, cipher2):0.688714
+eadd(cipher1, cipher2):-4.39171e-08
+---------------------
+
+
+
+---------------------
+maddAndEqual(cipher1, cipher2):0.688714
+daddAndEqual(cipher1, cipher2):0.688714
+eaddAndEqual(cipher1, cipher2):-4.39171e-08
+---------------------
+
+
+
+---------------------
+maddConst(cipher1, cnst):1.13919
+daddConst(cipher1, cnst):1.13919
+eaddConst(cipher1, cnst):-4.4173e-08
+---------------------
+
+
+
+---------------------
+maddConstAndEqual(cipher1, cnst):1.13919
+daddConstAndEqual(cipher1, cnst):1.13919
+eaddConstAndEqual(cipher1, cnst):-4.4173e-08
+---------------------
+
+
+
+---------------------
+msub(cipher1, cipher2):0.787102
+dsub(cipher1, cipher2):0.787102
+esub(cipher1, cipher2):-4.294e-08
+---------------------
+
+
+
+---------------------
+msubAndEqual(cipher1, cipher2):0.787102
+dsubAndEqual(cipher1, cipher2):0.787102
+esubAndEqual(cipher1, cipher2):-4.294e-08
+---------------------
+
+
+
+---------------------
+msubAndEqual2(cipher1, cipher2):0.787102
+dsubAndEqual2(cipher1, cipher2):0.787102
+esubAndEqual2(cipher1, cipher2):-4.294e-08
+---------------------
+
+
+
+---------------------
+msubConst:0.509622
+dsubConst:0.509622
+esubConst:4.95974e-08
+---------------------
+
+
+
+---------------------
+msubConstAndEqual:0.509622
+dsubConstAndEqual:0.509622
+esubConstAndEqual:4.95974e-08
+---------------------
+
+
+
+---------------------
+mmult(cipher1, cipher2):0.102788
+dmult(cipher1, cipher2):0.102788
+emult(cipher1, cipher2):-2.47408e-09
+---------------------
+
+
+
+---------------------
+mmultandEqual(cipher1, cipher2):0.102788
+dmultandEqual(cipher1, cipher2):0.102788
+emultandEqual(cipher1, cipher2):-2.47408e-09
+---------------------
+
+
+
+---------------------
+mimultandEqual(cipher1) twice:-0.179843
+dimultandEqual(cipher1) twice:-0.179843
+eimultandEqual(cipher1) twice:-6.13734e-09
+---------------------
+
+
+
+---------------------
+mmultByConst(cipher1, cnst, 30):0.109363
+dmultByConst(cipher1, cnst, 30):0.109363
+emultByConst(cipher1, cnst, 30):3.69932e-09
+---------------------
+
+
+
+---------------------
+mmultByConstAndEqual(cipher1, cnst, 30):0.109363
+dmultByConstAndEqual(cipher1, cnst, 30):0.109363
+emultByConstAndEqual(cipher1, cnst, 30):3.69932e-09
+---------------------
+
+
+
+
+
+
+slots: 8
+
+
+---------------------
+mval: 0 :0.567
+dval: 0 :0.567
+eval: 0 :-0.000
+---------------------
+---------------------
+mval: 1 :0.270
+dval: 1 :0.270
+eval: 1 :0.000
+---------------------
+---------------------
+mval: 2 :0.182
+dval: 2 :0.182
+eval: 2 :0.000
+---------------------
+---------------------
+mval: 3 :0.592
+dval: 3 :0.592
+eval: 3 :-0.000
+---------------------
+---------------------
+mval: 4 :0.262
+dval: 4 :0.262
+eval: 4 :0.000
+---------------------
+---------------------
+mval: 5 :0.372
+dval: 5 :0.372
+eval: 5 :0.000
+---------------------
+---------------------
+mval: 6 :0.500
+dval: 6 :0.500
+eval: 6 :-0.000
+---------------------
+---------------------
+mval: 7 :0.752
+dval: 7 :0.752
+eval: 7 :-0.000
+---------------------
+
+negate()
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+
+same()
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+
+negateAndEqual()
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+cipher.logp = 23
+ctrs = cipher.reScaleBy(1);kjlgjhghjj
+ctrs.logp = 22
+reScaleBy(1)
+-0.000	-0.000	0.000	-0.000	0.000	-0.000	-0.000	-0.000	
+
+cipher.logp = 23
+cipher.reScaleByAndEqual(1);
+cipher.logp = 22
+reScaleByAndEqual(1)
+-0.000	-0.000	0.000	-0.000	0.000	-0.000	-0.000	-0.000	
+
+cipher.logp = 22
+ctrs = cipher.reScaleTo(30);llllllllllll
+ctrs.logp = 30
+reScaleTo(30)
+-0.000	-0.000	0.000	-0.000	0.000	-0.000	-0.000	-0.000	
+
+cipher.logp = 23
+cipher.reScaleToAndEqual(30);jjjjjjjjjj
+cipher.logp = 30
+reScaleToAndEqual(30);
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+cipher.logq = 1200
+ctrs = cipher.modDownBy(10);
+ctrs.logq = 1190
+modDownBy(10)
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+cipher.logq = 1200
+cipher.modDownByAndEqual(80);
+cipher.logq = 1120
+modDownByAndEqual(80)
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+cipher.logq = 1200
+ctrs = cipher.modDownTo(300);
+ctrs.logq = 300
+modDownTo(300)
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+cipher.logq = 1200
+cipher.modDownToAndEqual(300);
+cipher.logq = 300
+modDownToAndEqual(300)
+-0.000	0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	
+
+add(cipher1, cipher2)
+0.000	-0.000	-0.000	-0.000	-0.000	0.000	0.000	0.000	
+
+addConst(cipher1, cnst)
+0.000	-0.000	-0.000	-0.000	-0.000	0.000	-0.000	0.000	
+
+addConstAndEqual(cipher1, cnst)
+0.000	-0.000	-0.000	-0.000	-0.000	0.000	-0.000	0.000	
+
+sub(cipher1, cipher2)
+0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	0.000	
+
+subAndEqual(cipher1, cipher2)
+0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	0.000	
+
+subAndEqual2(cipher1, cipher2)
+0.000	0.000	-0.000	0.000	0.000	-0.000	-0.000	0.000	
+
+subConst
+0.000	0.000	-0.000	0.000	0.000	0.000	0.000	0.000	
+
+subConstAndEqual
+0.000	0.000	-0.000	0.000	0.000	0.000	0.000	0.000	
+
+mult(cipher1, cipher2)
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	-0.000	
+
+multandEqual(cipher1, cipher2)
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	-0.000	
+
+imultandEqual(cipher1) twice
+-0.000	-0.000	0.000	0.000	0.000	-0.000	-0.000	-0.000	
+
+multByConst(cipher1, cnst, 30)
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	0.000	
+
+multByConstAndEqual(cipher1, cnst, 30)
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	0.000	
+
+addConstVec(cipher1, cvec, slots);
+0.000	-0.000	-0.000	-0.000	-0.000	0.000	-0.000	0.000	
+
+subConstVec(cipher1, cvec, slots);
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	0.000	
+
+multByConstVec(cipher1, cvec, slots, 30);
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	0.000	
+
+SFDSFS
+12
+cipher = scheme.leftRotateFast(cipher, 1);
+cipher = scheme.rightRotateFast(cipher, 1);
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	0.000	
+
+0.000	0.000	-0.000	-0.000	-0.000	0.000	0.000	0.000	
+
+cipher logq before: 29
+cipher logq after: 853
+---------------------
+mbootstrap single real:0.343
+dbootstrap single real:0.343
+ebootstrap single real:0.000
+---------------------
+cipher logq before: 29
+cipher logq after: 787
+---------------------
+mbootstrap real array: 0 :0.621
+dbootstrap real array: 0 :0.621
+ebootstrap real array: 0 :0.000
+---------------------
+---------------------
+mbootstrap real array: 1 :0.109
+dbootstrap real array: 1 :0.109
+ebootstrap real array: 1 :0.000
+---------------------
+---------------------
+mbootstrap real array: 2 :0.573
+dbootstrap real array: 2 :0.573
+ebootstrap real array: 2 :0.000
+---------------------
+---------------------
+mbootstrap real array: 3 :0.048
+dbootstrap real array: 3 :0.048
+ebootstrap real array: 3 :0.000
+---------------------
+---------------------
+mbootstrap real array: 4 :0.313
+dbootstrap real array: 4 :0.312
+ebootstrap real array: 4 :0.000
+---------------------
+---------------------
+mbootstrap real array: 5 :0.970
+dbootstrap real array: 5 :0.970
+ebootstrap real array: 5 :0.000
+---------------------
+---------------------
+mbootstrap real array: 6 :0.921
+dbootstrap real array: 6 :0.921
+ebootstrap real array: 6 :0.000
+---------------------
+---------------------
+mbootstrap real array: 7 :0.696
+dbootstrap real array: 7 :0.696
+ebootstrap real array: 7 :0.000
+---------------------
+!!! END TEST BOOTSRTAP !!!
+Error: cannot read file
+
+0.000
+</pre>
