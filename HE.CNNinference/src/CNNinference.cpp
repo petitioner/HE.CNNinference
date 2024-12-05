@@ -44,10 +44,10 @@ int main(int argc, char **argv) {
 	vector<vector<vector<double>>> dataset = Tools::dataFromFile(mnisttestfile);
 
 
-	labels = dataset[0];
-        reddata = dataset[1];
-        grndata = dataset[2];
-        blkdata = dataset[3];
+	auto labels = dataset[0];
+        auto reddata = dataset[1];
+        auto grndata = dataset[2];
+        auto blkdata = dataset[3];
 
 	cout << "total number of images: " << reddata.size() << endl;
 	cout << "total number of images: " << grndata.size() << endl;
@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
 	cout << "total element number of an image: " << blkdata[0].size() << endl;
 
 	
-	for (int imgidx = 0; imgidx < 5; n++) {
+	for (int imgidx = 0; imgidx < 5; imgidx++) {
 		cout<< "label: " << int(labels[imgidx][0]) << endl;
 
 		for (int pixidx=0; pixidx < reddata[imgidx].size(); ++pixidx) {
