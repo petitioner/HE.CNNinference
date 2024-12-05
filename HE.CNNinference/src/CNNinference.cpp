@@ -44,16 +44,25 @@ int main(int argc, char **argv) {
 	vector<vector<vector<double>>> dataset = Tools::dataFromFile(mnisttestfile);
 
 
-	for (int n = 0; n < 5; n++) {
-		cout<< endl << testdatalabel[n] << endl;
+	labels = dataset[0];
+        reddata = dataset[1];
+        grndata = dataset[2];
+        blkdata = dataset[3];
 
-		for (int i=0; i < 28; ++i) {
-			for ( int j=0; j < 28; ++j)
-				if(testdataset[n][i*28+j] < 1e-2) cout << "     ";
-            	else printf("%5d", int(testdataset[n][i*28+j]) ) ;
-    		cout << endl;
+	for (int imgidx = 0; imgidx < 5; n++) {
+		cout<< "label: " << labels[imgidx][0] << endl;
+
+		for (int pixidx=0; pixidx < reddata[imgidx].size(); ++pixidx) {
+		    if ( pixidx % 32 == 0) cout << endl;
+
+            	    double gray_value = (reddata[imgidx][pixidx] + grndata[imgidx][pixidx] + blkdata[imgidx][pixidx]) / 3.0;
+            	    int gray_code = 232 + std::round(gray_value / 255.0 * 23);
+                    std::cout << "\033[38;5;" << gray_code << "m" << " . " << "\033[0m";
 		}
+
+		cout << endl << endl << endl << endl;
 	}
+	cout << endl << endl << endl << endl;
 
 
 
@@ -61,6 +70,14 @@ int main(int argc, char **argv) {
 	string CNNweightsMNIST  = "../data/CNNweightsMNIST.csv";
 	string CNNweightsCIFAR10  = "../data/CNNweightsCIFAR10.csv";
 	vector<vector<double>> weights = Tools::dataFromCNNweightsFile(CNNweightsMNIST);
+
+	cout << "CNN Weights:" << endl;
+	for (auto wetrow : weights) {
+            for (auto it = wetrow.begin(); it != wetrow.end(); ++it) {
+        	cout << *it << "\t";
+    	    }
+	    cout << endl;
+        }
 	
 
 
