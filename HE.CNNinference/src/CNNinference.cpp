@@ -107,7 +107,7 @@ int main(int argc, char **argv) {
         	cout << *it << "\t";
     	    }
 	    cout << endl << endl << endl;
-	    for(int i=0; i<30;++i) cout << "- ";
+	    for(int i=0; i<30;++i) cout << "- "; cout << endl;
         }
 	
 	//rownum, vctslots, image_height, image_width
