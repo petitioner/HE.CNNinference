@@ -1,5 +1,6 @@
 #include <NTL/BasicThreadPool.h>
 #include <thread>
+#include <cstdio>
 #include <cstdlib>
 #include <iostream>
 #include <stdexcept>
@@ -9,9 +10,8 @@
 #include "Methods.h"
 #include "Tools.h"
 
-#include "TestScheme.h"
+//#include "TestScheme.h"
 
-#include <cstdio>
 
 using namespace std;
 using namespace NTL;
@@ -35,17 +35,15 @@ int main(int argc, char **argv) {
 	
 
 
-TestScheme::testAllFunctions();
+        //TestScheme::testAllFunctions();
 
-	//string trainfile = "../data/FASHION-MNISTtrain(28x28).csv";
-	//string testfile  = "../data/FASHION-MNISTt10k(28x28).csv";
-    //string CNNweightsfile  = "../data/CNNweightsFASHIONMNIST.csv";
 
-	string trainfile = "../data/MNISTtrain(28x28).csv";
-	string testfile  = "../data/MNISTt10k(28x28).csv";
-	//string testfile  = "../data/MNISTt10k(28x28)first32imagesfortest.csv";
-	//string testfile  = "../data/MNISTt10k(28x28)first68imagesfortest.csv";
-	string CNNweightsfile  = "../data/CNNweightsMNIST.csv";
+
+	string mnisttestfile  = "../data/MNIST_test_dataset.csv";
+	string cifartestfile  = "../data/CIFAR10_test_dataset.csv";
+
+	string CNNweightsMNIST  = "../data/CNNweightsMNIST.csv";
+	string CNNweightsCIFAR10  = "../data/CNNweightsCIFAR10.csv";
 	
 
 
