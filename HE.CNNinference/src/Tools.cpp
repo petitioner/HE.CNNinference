@@ -110,7 +110,8 @@ vector<vector<vector<double>>>  Tools::dataFromFile(string& path){
     std::ifstream infile(path);
     if (!infile.is_open()) {
         std::cerr << "Failed to open file: " << path << std::endl;
-        return std::vector<std::vector<std::vector<double>>>();
+        //return std::vector<std::vector<std::vector<double>>>();
+	exit(-1);
     }
 
     std::string line;
@@ -118,7 +119,8 @@ vector<vector<vector<double>>>  Tools::dataFromFile(string& path){
         std::cout << "Skipping the first line: " << line << std::endl;
     } else {
         std::cerr << "File is empty or could not read the first line." << std::endl;
-        return std::vector<std::vector<std::vector<double>>>();
+        //return std::vector<std::vector<std::vector<double>>>();
+	exit(-1);
     }
 
     vector<vector<vector<double>>> dataset;
@@ -158,10 +160,10 @@ vector<vector<vector<double>>>  Tools::dataFromFile(string& path){
             grnline.push_back(green);
             blkline.push_back(black);
 
-
+	    /*
             idx += 1;
             if ( idx % 32 == 0) cout << endl;
-	    /*
+
             double gray_value = (red + green + black) / 3.0;
             int gray_code = 232 + std::round(gray_value / 255.0 * 23);
             std::cout << "\033[38;5;" << gray_code << "m" << " . " << "\033[0m";
@@ -192,7 +194,8 @@ vector<vector<double>> Tools::dataFromCNNweightsFile(string& path){
     std::ifstream infile(path);
     if (!infile.is_open()) {
         std::cerr << "Failed to open file: " << path << std::endl;
-        return std::vector<std::vector<double>>();
+        //return std::vector<std::vector<double>>();
+	exit(-1);
     }
 
     std::string line;
