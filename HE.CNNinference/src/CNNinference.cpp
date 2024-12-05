@@ -49,8 +49,20 @@ int main(int argc, char **argv) {
         grndata = dataset[2];
         blkdata = dataset[3];
 
+	cout << "total number of images: " << reddata.size() << endl;
+	cout << "total number of images: " << grndata.size() << endl;
+	cout << "total number of images: " << blkdata.size() << endl;
+	cout << "total number of images: " << labels.size() << endl;
+
+	cout << endl << endl;
+
+	cout << "total element number of an image: " << reddata[0].size() << endl;
+	cout << "total element number of an image: " << grndata[0].size() << endl;
+	cout << "total element number of an image: " << blkdata[0].size() << endl;
+
+	
 	for (int imgidx = 0; imgidx < 5; n++) {
-		cout<< "label: " << labels[imgidx][0] << endl;
+		cout<< "label: " << int(labels[imgidx][0]) << endl;
 
 		for (int pixidx=0; pixidx < reddata[imgidx].size(); ++pixidx) {
 		    if ( pixidx % 32 == 0) cout << endl;
@@ -71,8 +83,9 @@ int main(int argc, char **argv) {
 	string CNNweightsCIFAR10  = "../data/CNNweightsCIFAR10.csv";
 	vector<vector<double>> weights = Tools::dataFromCNNweightsFile(CNNweightsMNIST);
 
-	cout << "CNN Weights:" << endl;
+	cout << "CNN Weights: " << weights.size() << " lines" <<  endl;
 	for (auto wetrow : weights) {
+	    cout << wetrow.size() << " parameters:  ";
             for (auto it = wetrow.begin(); it != wetrow.end(); ++it) {
         	cout << *it << "\t";
     	    }
