@@ -109,8 +109,8 @@ vector<vector<vector<double>>>  Tools::dataFromFile(string& path){
 
     std::ifstream infile(path);
     if (!infile.is_open()) {
-        std::cerr << "Failed to open file: " << filename << std::endl;
-        return 1; 
+        std::cerr << "Failed to open file: " << path << std::endl;
+        return NULL; 
     }
 
     std::string line;
@@ -118,7 +118,7 @@ vector<vector<vector<double>>>  Tools::dataFromFile(string& path){
         std::cout << "Skipping the first line: " << line << std::endl;
     } else {
         std::cerr << "File is empty or could not read the first line." << std::endl;
-        return 1;
+        return NULL;
     }
 
     vector<vector<vector<double>>> dataset;
@@ -190,13 +190,13 @@ vector<vector<double>> Tools::dataFromCNNweightsFile(string& path){
 
     std::ifstream infile(path);
     if (!infile.is_open()) {
-        std::cerr << "Failed to open file: " << filename << std::endl;
-        return 1; 
+        std::cerr << "Failed to open file: " << path << std::endl;
+        return NULL; 
     }
 
     std::string line;
     while (std::getline(infile, line)) {
-        vector<double>> wetline;
+        vector<double> wetline;
 
         stringstream ss(line);
 
