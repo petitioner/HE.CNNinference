@@ -161,10 +161,11 @@ vector<vector<vector<double>>>  Tools::dataFromFile(string& path){
 
             idx += 1;
             if ( idx % 32 == 0) cout << endl;
-
+	    /*
             double gray_value = (red + green + black) / 3.0;
             int gray_code = 232 + std::round(gray_value / 255.0 * 23);
             std::cout << "\033[38;5;" << gray_code << "m" << " . " << "\033[0m";
+	    */
         }
 
         reddata.push_back(redline);
