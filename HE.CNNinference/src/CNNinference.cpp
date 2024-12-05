@@ -65,6 +65,10 @@ int main(int argc, char **argv) {
 	for (int imgidx = 0; imgidx < 5; imgidx++) {
 		cout<< "label: " << int(labels[imgidx][0]) << endl;
 
+		for(int i=0; i<12; ++i) cout << reddata[imgidx][i]<< ", "; cout << endl;
+		for(int i=0; i<12; ++i) cout << grndata[imgidx][i]<< ", "; cout << endl;
+		for(int i=0; i<12; ++i) cout << blkdata[imgidx][i]<< ", "; cout << endl;
+
 		for (int pixidx=0; pixidx < reddata[imgidx].size(); ++pixidx) {
 		    if ( pixidx % 32 == 0) cout << endl;
 
