@@ -27,6 +27,26 @@
 
 #include "HEAAN.h"
 
+
+
+
+double computeAverage(const vector<vector<double>>& matrix) {
+    double sum = 0;
+    size_t count = 0;
+
+    for (const auto& row : matrix) {
+        sum += accumulate(row.begin(), row.end(), 0.0); 
+        count += row.size();
+    }
+
+    if (count == 0) {
+        return 0.0; 
+    }
+
+    return sum / count;
+}
+
+
 int CNNinference(int rownum, int vctslots, int image_height, int image_width, vector<vector<vector<double>>> dataset, vector<vector<double>> weights)
 {
   cout << endl << endl << endl << endl;
@@ -36,6 +56,8 @@ int CNNinference(int rownum, int vctslots, int image_height, int image_width, ve
   cout << "image_height: " << image_height << endl;
   cout << "image_width: " << image_width << endl;
 
+    double avg = computeAverage(weights);
+    cout << "Average of weights: " << avg << endl;
 
   //-----------------------------------------
   long logN = 11;
