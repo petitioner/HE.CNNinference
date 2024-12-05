@@ -6,6 +6,7 @@
 #include <stdexcept>
 #include <string>
 #include <algorithm>
+#include <iomanip> //setw()
 
 #include "Methods.h"
 #include "Tools.h"
@@ -67,17 +68,17 @@ int main(int argc, char **argv) {
 
 		for(int i=0; i<32; ++i) { 
 			for(int j=0; j<32; ++j)
-				cout << reddata[imgidx][32*i+j]<< "  "; 
+				cout <<  setw(3) << reddata[imgidx][32*i+j]<< "  "; 
 			cout << endl;
 		}
 		for(int i=0; i<32; ++i) { 
 			for(int j=0; j<32; ++j)
-				cout << grndata[imgidx][32*i+j]<< "  "; 
+				cout <<  setw(3) << grndata[imgidx][32*i+j]<< "  "; 
 			cout << endl;
 		}
 		for(int i=0; i<32; ++i) { 
 			for(int j=0; j<32; ++j)
-				cout << blkdata[imgidx][32*i+j]<< "  "; 
+				cout <<  setw(3) << blkdata[imgidx][32*i+j]<< "  "; 
 			cout << endl;
 		}
 
