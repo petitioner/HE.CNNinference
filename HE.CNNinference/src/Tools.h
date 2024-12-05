@@ -77,7 +77,7 @@ public:
 	static long suggestLogN(long lambda, long logQ);
     static bool is_number(string& s);
 	static vector<vector<vector<double>>> dataFromFile(string& path);
-	static double** dataFromCNNweightsFile(string& path, long& len, long* &dims);
+	static vector<vector<double>> dataFromCNNweightsFile(string& path);
 	static double** zDataFromFile(string& path, long& factorDim, long& sampleDim, bool isfirst = true);
 
 	static void shuffleDataSync(double** X, long factorDim, long sampleDim, double* Y);
