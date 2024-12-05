@@ -191,7 +191,7 @@ vector<vector<double>> Tools::dataFromCNNweightsFile(string& path){
     std::ifstream infile(path);
     if (!infile.is_open()) {
         std::cerr << "Failed to open file: " << path << std::endl;
-        return std::vector<std::vector<std::vector<double>>>();
+        return std::vector<std::vector<double>>();
     }
 
     std::string line;
