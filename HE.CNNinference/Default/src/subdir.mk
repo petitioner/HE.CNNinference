@@ -5,19 +5,16 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/CNNinference.cpp \
-../src/VolleyRevolverEncoding.cpp \
 ../src/Methods.cpp \
 ../src/Tools.cpp 
 
 OBJS += \
 ./src/CNNinference.o \
-./src/VolleyRevolverEncoding.o \
 ./src/Methods.o \
 ./src/Tools.o 
 
 CPP_DEPS += \
 ./src/CNNinference.d \
-./src/VolleyRevolverEncoding.d \
 ./src/Methods.d \
 ./src/Tools.d 
 
