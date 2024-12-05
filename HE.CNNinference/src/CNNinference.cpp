@@ -98,7 +98,7 @@ int main(int argc, char **argv) {
         }
 	
 	//rownum, vctslots, image_height, image_width
-	Methods::CNNinference(32, 1024, 32, 32, dataset, weights);
+	CNNinference(32, 1024, 32, 32, dataset, weights);
 
 	
 	cout << endl << "END OF THE PROGRAMM" << endl;
