@@ -49,6 +49,7 @@ int main(int argc, char **argv) {
         auto grndata = dataset[2];
         auto blkdata = dataset[3];
 
+	cout << endl << endl;
 	cout << "total number of images: " << reddata.size() << endl;
 	cout << "total number of images: " << grndata.size() << endl;
 	cout << "total number of images: " << blkdata.size() << endl;
@@ -85,11 +86,11 @@ int main(int argc, char **argv) {
 
 	cout << "CNN Weights: " << weights.size() << " lines" <<  endl;
 	for (auto wetrow : weights) {
-	    cout << wetrow.size() << " parameters:  ";
+	    cout << wetrow.size() << " parameters:  " << endl;
             for (auto it = wetrow.begin(); it != wetrow.end(); ++it) {
         	cout << *it << "\t";
     	    }
-	    cout << endl;
+	    cout << endl << endl << endl;
         }
 	
 
