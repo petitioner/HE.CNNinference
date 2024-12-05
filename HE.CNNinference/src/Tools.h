@@ -28,6 +28,7 @@
 #define IDASH2017_GD_H_
 
 #include <iostream>
+#include <vector>
 #include <assert.h>
 #include <cmath>
 
@@ -75,7 +76,7 @@ public:
 
 	static long suggestLogN(long lambda, long logQ);
     static bool is_number(string& s);
-	static double** dataFromFile(string& path, long& factorDim, long& sampleDim, double** &X, double* &Y);
+	static vector<vector<vector<double>>> dataFromFile(string& path);
 	static double** dataFromCNNweightsFile(string& path, long& len, long* &dims);
 	static double** zDataFromFile(string& path, long& factorDim, long& sampleDim, bool isfirst = true);
 
