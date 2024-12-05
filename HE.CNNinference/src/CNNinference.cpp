@@ -106,8 +106,8 @@ int main(int argc, char **argv) {
             for (auto it = wetrow.begin(); it != wetrow.end(); ++it) {
         	cout << *it << "\t";
     	    }
-	    cout << endl << endl << endl;
-	    for(int i=0; i<30;++i) cout << "- "; cout << endl;
+	    cout << endl << endl << endl << endl << endl << endl << endl;
+	    for(int i=0; i<30;++i) cout << "- "; cout << endl << endl;
         }
 	
 	//rownum, vctslots, image_height, image_width
