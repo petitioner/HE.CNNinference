@@ -62,12 +62,24 @@ int main(int argc, char **argv) {
 	cout << "total element number of an image: " << blkdata[0].size() << endl;
 
 	
-	for (int imgidx = 0; imgidx < 5; imgidx++) {
+	for (int imgidx = 0; imgidx < 15; imgidx++) {
 		cout<< "label: " << int(labels[imgidx][0]) << endl;
 
-		for(int i=0; i<12; ++i) cout << reddata[imgidx][i]<< ", "; cout << endl;
-		for(int i=0; i<12; ++i) cout << grndata[imgidx][i]<< ", "; cout << endl;
-		for(int i=0; i<12; ++i) cout << blkdata[imgidx][i]<< ", "; cout << endl;
+		for(int i=0; i<32; ++i) { 
+			for(int j=0; j<32; ++j)
+				cout << reddata[imgidx][32*i+j]<< "  "; 
+			cout << endl;
+		}
+		for(int i=0; i<32; ++i) { 
+			for(int j=0; j<32; ++j)
+				cout << grndata[imgidx][32*i+j]<< "  "; 
+			cout << endl;
+		}
+		for(int i=0; i<32; ++i) { 
+			for(int j=0; j<32; ++j)
+				cout << blkdata[imgidx][32*i+j]<< "  "; 
+			cout << endl;
+		}
 
 		for (int pixidx=0; pixidx < reddata[imgidx].size(); ++pixidx) {
 		    if ( pixidx % 32 == 0) cout << endl;
@@ -95,6 +107,7 @@ int main(int argc, char **argv) {
         	cout << *it << "\t";
     	    }
 	    cout << endl << endl << endl;
+	    for(int i=0; i<30;++i) cout << "- ";
         }
 	
 	//rownum, vctslots, image_height, image_width
