@@ -4,7 +4,7 @@
 #include <assert.h>
 
 
-int CNNinference(double** testdata, double* testlabel, long factorDim, long sampleDim, double **CNNdate, long cnnWeightsLen, long *cnnWeightsDims);
+int CNNinference(int rownum, int vctslots, int image_height, int image_width, vector<vector<vector<double>>> dataset, vector<vector<double>> weights);
 
 int HE_SquareMatrixMult(long dim=64);
 
