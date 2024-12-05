@@ -24,7 +24,6 @@
 #include <chrono>       // std::chrono::system_clock
 
 #include <unistd.h>
-#include "VolleyRevolverEncoding.h"
 
 
 int CNNinference(double** testdata, double* testlabel, long factorDim, long sampleDim, double **CNNdate, long cnnWeightsLen, long *cnnWeightsDims)
