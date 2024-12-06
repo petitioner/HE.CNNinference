@@ -1,3 +1,4 @@
+# Need the HEAAN to be compiled first in order to produce .o files
 ```shell
 john@ThinkBook15IML:~$ ssh root@66.135.23.150
 The authenticity of host '66.135.23.150 (66.135.23.150)' can't be established.
